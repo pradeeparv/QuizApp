@@ -1,0 +1,32 @@
+
+li{
+    list-style-type: none;
+    cursor: pointer;
+    margin: 5px 0;
+   
+}
+ol{
+    border-style: solid;
+    border: 2px;
+    padding: 0;
+   
+}
+
+li .card :hover{
+    border: 2px solid blue; 
+    padding: 5px;
+}
+
+li .card{
+    padding: 5px;
+    border-radius: 10px;
+    
+}
+.ques{
+    padding: 5px;
+    margin-top: 5px;
+  
+}
+.result p{
+    font-size: medium;
+}

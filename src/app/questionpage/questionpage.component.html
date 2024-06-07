@@ -1,0 +1,88 @@
+<div class="container">
+    <div class="row" style="margin-top: 35px; margin-left: 280px;">
+      <ng-container *ngIf="!isquizcompleted">
+        <div class="col-7">
+          <div class="card">
+            <div class="d-flex justify-content-between p-3">
+              <div class="image">
+                <img src="../assets/undraw_quiz_re_aol4.svg" width="90px" height="100px">
+              </div>
+              <div class="header">
+                <h5 class="header" style="font-family: cursive;">Java And Springboot Quiz!</h5>
+                <h6 class="welcome" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                  Welcome {{name}}
+                </h6>
+              </div>
+            </div>
+  
+            <div class="d-flex justify-content-around py-2">
+              <div class="score">
+                <h6 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                  {{points}} points
+                </h6>
+              </div>
+  
+              <div class="questions">
+                <h6 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                  Question {{currentlist + 1}} of {{questionlist.length}}
+                </h6>
+              </div>
+  
+              <div class="timer">
+                <h6 style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                  {{counter}} sec
+                </h6>
+              </div>
+            </div>
+  
+            <div class="progress">
+              <div class="progress-bar progress-bar-striped" role="progressbar" [ngStyle]="{'width': progress + '%'}"
+                aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+              </div>
+            </div>
+  
+            <div class="card ques" style="margin-top: 5px; font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+              <h5>{{questionlist[currentlist]?.questionText}}</h5>
+            </div>
+  
+            <div class="card" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+              <ol *ngFor="let option of questionlist[currentlist].options">
+                <li (click)="answer(currentlist + 1, option)">
+                  <div class="card">
+                    <h6>{{option.text}}</h6>
+                  </div>
+                   <!---- <li> <div class="card">
+                                        <h6>{{option}}</h6>
+                                    </div></li>
+                                    <li> <div class="card">
+                                        <h6>{{option}}</h6>
+                                    </div></li>-->
+                </li>
+              </ol>
+              <div class="btn-group" style="margin-left: 280px;">
+                <button [disabled]="currentlist == 0" type="button" class="btn btn-success" (click)="previousquestion()">Previous</button>
+                <button type="button" class="btn btn-success" (click)="resetquestion()">Reset</button>
+                <button type="button" class="btn btn-success" (click)="nextquestion()">Next</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+  
+      <ng-container *ngIf="isquizcompleted">
+        <div class="row d-flex justify-content-between">
+          <img src="assets/congratulation.png" width="50%" style="margin-top: 30px;" class="img-fluid col-sm-6 mx-auto">
+          <div class="result col-sm-6" style="font-family: 'Times New Roman', Times, serif;">
+            <h4 style="margin-top: 45px; font-size: larger; color: green;"><b>Congratulations..!</b></h4>
+            <h5><b>You have completed the quiz.</b></h5>
+            <h5>Below is your result:</h5>
+            <p>Total Question Attempt: {{questionlist.length}}</p>
+            <p>Total Correct Answered: {{correctanswer}}</p>
+            <p>Total Wrong Answered: {{incorrectanswer}}</p>
+            <p>Total Score: {{points}} Points</p>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  

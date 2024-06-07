@@ -1,0 +1,177 @@
+{
+  "questions": [
+    {
+      "questionText": "What is Java?",
+      "options": [
+        {
+          "text": "A. Java is a high-level programming language",
+          "correct": true
+        },
+        {
+          "text": "B. Java is a low-level programming language"
+        },
+        {
+          "text": "C. Both A and B"
+        }
+      ]
+    },
+
+    {
+      "questionText": "When an array is passed to a method, what does the method receive?",
+      "options": [
+        {
+          "text": "A. Copy of first element"
+        },
+        {
+          "text": "B. The reference of the array",
+          "correct": true
+        },
+        {
+          "text": "C. Length of the array"
+        }
+      ]
+    },
+
+    {
+      "questionText": "By default a bean is lazily loaded?",
+      "options": [
+        {
+          "text": "A. True"
+         
+        },
+        {
+          "text": "B. False",
+          "correct": true
+          
+        },
+        {
+          "text": "C. None"
+          
+        }
+      ]
+    },
+
+    {
+      "questionText": "What types of dependency injection does spring support?",
+      "options": [
+        {
+          "text": "A. Based on setters, getters and properties"
+        },
+        {
+          "text": "B. Based on the constructor, setters and getters"
+          
+          
+        },
+        {
+          "text": "C. Based on the constructor and setters",
+          "correct":true
+         
+        }
+      ]
+    },
+
+    {
+      "questionText": "Which of the following statements is correct regarding the spring framework?",
+      "options": [
+        {
+          "text": "A. The Spring framework is a heavy-weight solution"
+        },
+        {
+          "text": "B. The Spring framework is a light-weight solution",
+          "correct":true
+          
+        },
+        {
+          "text": "C. Both A and B are true"
+         
+        }
+      ]
+    },
+
+    {
+      "questionText": "Automatic type conversion is possible in which of the possible cases?",
+      "options": [
+        {
+          "text": "A. Byte to int",
+          "correct":true
+        },
+        {
+          "text": "B. Long to int"
+         
+          
+        },
+        {
+          "text": "C. Short to int"
+         
+        }
+      ]
+    },
+
+    {
+      "questionText":"Arrays in java are?",
+      "options":[
+        {
+          "text":"A. Objects"
+
+        },
+        {
+          "text":"B. Primitive data type"
+        },
+        {
+          "text":"C. Object References",
+          "correct":true
+        }
+      ]
+    },
+   
+    {
+      "questionText":"What is Advice?",
+      "options":[
+        {
+          "text":"A. This is used to inject values in objects"
+        },
+        {
+          "text":"B. This is the actual action to be taken either before or after the method execution",
+          "correct":true
+        },
+        {
+          "text":"C. This is the way to instruct object to behave in certain manner"
+        }
+      ]
+    },
+
+    {
+      "questionText":"How to use ref keyword in beans.xml?",
+      "options":[
+        {
+           "text":"A. Using setter method only"
+      },
+    {
+      "text":"B. Using constructor argument only"
+    },
+    {
+      "text":"C. Using setter method and construtor argument both",
+      "correct":true
+    }  
+  ]
+    },
+
+    {
+      "questionText":"When is the finalize() method called?",
+      "options":[
+        {
+           "text":"A. Before garbage collection"
+      },
+    {
+      "text":"B. Before a variable goes out of scope",
+      "correct":true
+    },
+    {
+      "text":"C. Before an object goes out of scope"
+      
+    }  
+  ]
+    }
+  ]
+  
+}
